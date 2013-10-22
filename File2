@@ -1,0 +1,129 @@
+#Sneh Munshi
+#CS 1301 A01
+#GT ID: 903004069
+#smunshi6@gatech.edu
+#I worked on the homework assignment alone, using only this semester's course material.
+
+
+#The following function determines whether the user passes the class or not based on the grade.
+
+def passOrNot (grade):
+    if grade >= 70:
+       return ("Congratulations. You passed!")
+    else :
+       return ("Sorry. You must have at least 70% to pass. See you next semester.")
+
+
+#The following function shows how many times four divides into a number.
+
+def modulusFour (start) :
+    print (start)
+    while start >= 4:
+      start = start - 4
+      print (start)
+
+    print ("The remainder is the number shown above.")
+
+
+#The following function returns a new string that contains only letters of the original input.
+#It leaves a space in place of numbers, symbols and other punctuations.
+
+def letterSpace (userString) :
+    import string
+    index = 0
+    length = len (userString)
+    word = ""
+    while index < length :
+       if userString[index] in string.ascii_letters:
+          word = word + userString[index]
+          index = index + 1
+       else:
+          word = word + " "
+          index = index + 1
+    return word
+
+
+#The following function returns a string of compliments based on the adjectives selected by the inputs.
+
+def complimentMaker(answer1,answer2,answer3,answer4):
+
+    if answer1 == answer2 == answer3 == answer4 == False :
+       return ("No Comment.")
+
+    if answer1 == True:
+       compliment1 = " super"
+    else :
+       compliment1 = ""
+
+    if answer2 == True:
+       compliment2 = " nice"
+    else :
+       compliment2 = ""
+
+    if answer3 == True:
+       compliment3 = " smart"
+    else :
+       compliment3 = ""
+
+    if answer4 == True:
+       compliment4 = " cool"
+    else :
+       compliment4 = ""
+
+    return ("You are"+ compliment1 + compliment2 + compliment3 + compliment4 +".")
+
+
+#The following function takes in two strings and returns out the two words as one meshed word.
+
+def wordMesh (wordA,wordB) :
+    length_wordA = len(wordA)
+    length_wordB = len(wordB)
+    index = 0
+    mesh = ""
+    while index < length_wordA and index < length_wordB :
+          mesh = mesh + wordA[index] + wordB[index]
+          index = index + 1
+    return mesh
+
+
+#The following function finds all the occurrences of an old word in a string and replaces it with a new word.
+
+def replaceWord (oldWord,newWord,aStr) :
+    aString = aStr.replace (oldWord,newWord)
+    return (aString)
+
+
+#The following function takes in the number of rows of the mountain range and draws a number mountain range.
+
+def numMountainRange(X) :
+    for i in range (1,X+1):
+        print (str(i)+ (X-i)*" "+ (2*i-1)*str(i)+ (X-i)*" "+ str(i))
+
+#The following function prints the times table upto 100 by the increment of 10.
+
+def print10table () :
+    print ("Times:", end= "\t")
+    for a in range (10,110,10):
+        print (a, end= "\t")
+    print ()
+    for i in range (10,110,10):
+        print (i, end= "\t")
+        for x in range (10,110,10) :
+            print (x*i,end="\t")
+        print ()
+
+
+#The following function prints a times table from 1 to N by the increment of inc.
+
+def printTimes (N,inc) :
+    print ("Times:", end= "\t")
+    for a in range (1,N+1,inc):
+        print (a, end= "\t")
+    print ()
+    for i in range (1,N+1,inc):
+        print (i, end= "\t")
+        for x in range (1,N+1,inc):
+            print (x*i,end="\t")
+        print ()
+
+
